@@ -152,7 +152,7 @@ MonoBehaviour:
   bullet: {fileID: 7222999297465361205, guid: 8b10695c0aa867c46acdd124297ce37b, type: 3}
   mosterDie: {fileID: 7884968852211980681, guid: dc6a9e88c2c1a724ea52523acb61963b, type: 3}
   Item: {fileID: 1870153331914468245, guid: 9fe52c69a75a38e4287cb71fd452d0e3, type: 3}
-  hp: 5
+  hp: 100
 --- !u!1 &5720250469728996774
 GameObject:
   m_ObjectHideFlags: 0

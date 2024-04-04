@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class PBullet: MonoBehaviour
 {   
-    public float bulletSpeed = 4.0f;
+    public float bulletSpeed = 10.0f;
     public GameObject hit;
-
+    public int Attack = 10;
 
     void Start()
     {
@@ -30,6 +30,7 @@ public class PBullet: MonoBehaviour
         {
             GameObject go = Instantiate(hit, transform.position, Quaternion.identity);
             Destroy(go, 0.1f);
+            collision.gameObject.GetComponent<Monster>().Damage(Attack);
         }
     }
 

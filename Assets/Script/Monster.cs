@@ -11,10 +11,10 @@ public class Monster : MonoBehaviour
     public Transform ms2;
     public GameObject bullet;
     public GameObject mosterDie;
-    public GameObject Item;
+    public GameObject Item = null;
 
 
-    public int hp = 5;
+    public int hp = 100;
 
 
     void Start()
@@ -46,25 +46,30 @@ public class Monster : MonoBehaviour
     {
         if (collision.CompareTag("PBullet"))
         {
-            hp--;
             Destroy(collision.gameObject);
 
             StartCoroutine("Hit");
-
-            if (hp <= 0)
-            {
-                int num = Random.Range(0, 100);
-                if (num > 70)
-                {
-                    Instantiate(Item, transform.position, Quaternion.identity);
-                }
-
-                GameObject go = Instantiate(mosterDie, transform.position, Quaternion.identity);
-                Destroy(go, 1);
-                Destroy(gameObject);
-            }
         }
     }
+
+
+    public void Damage(int attack)
+    {
+        hp -= attack;
+        if(hp < 0)
+        {
+            GameObject go = Instantiate(mosterDie, transform.position, Quaternion.identity);
+            Destroy(go, 1);
+            int num = Random.Range(0, 100);
+            if (num > 70)
+            {
+                Instantiate(Item, transform.position, Quaternion.identity);
+            }
+            Destroy(gameObject);
+        }
+    }
+   
+
 
     IEnumerator Hit()
     {

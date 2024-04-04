@@ -9,6 +9,7 @@ TagManager:
   - PBullet
   - XWall
   - YWall
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Item
   - 
   - 
   - 

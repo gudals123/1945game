@@ -9,11 +9,13 @@ public class Player : MonoBehaviour
     Animator ani;   //애니메이터를 가져올 변수
 
     public Transform pos = null;
-    public GameObject bullet;
+    public List<GameObject> bullet = new List<GameObject>();
+
     public GameObject playerdie;
     public bool shootCheck = true;
 
-
+    public int power = 0;
+    public int itemCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -73,8 +75,8 @@ public class Player : MonoBehaviour
     IEnumerator Shoot()
     {
         // 프리팹 위치 방향 생성
-        yield return new WaitForSeconds(0.1f);
-        Instantiate(bullet, pos.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.05f);
+        Instantiate(bullet[power], pos.position, Quaternion.identity);
         shootCheck = true;
 
     }
@@ -90,6 +92,25 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
 
             Destroy(gameObject);*/
+        }
+        if (collision.CompareTag("Item"))
+        {
+            itemCount +=1;
+
+            if (itemCount >= 2)
+            {
+                power = 1;
+            }
+            if (itemCount >= 4)
+            {
+                power = 2;
+            }
+            if (itemCount >= 6)
+            {
+                power = 3;
+            }
+            //GameManager.Instance.AddItem();
+            Destroy(collision.gameObject);
         }
     }
 }

@@ -13,13 +13,13 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-    private int itemCount = 0;
+/*    private int itemCount = 0;
 
     public void AddItem()
     {
         itemCount++;
         Debug.Log(itemCount);
-    }
+    }*/
     void Start()
     {
         

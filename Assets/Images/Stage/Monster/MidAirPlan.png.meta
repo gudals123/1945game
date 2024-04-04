@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e203dda7f63fed549a065a510d259c1f
+guid: c0c14a47d867d7d479f03392047e49a0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MGuide_Bullet_0
+      name: MidAirPlan_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 12
-        height: 16
+        width: 310
+        height: 335
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c3024672a0779f44a9f342c6592c592
-      internalID: 1197256336
+      spriteID: e1e048e91d327c046a7e2f9b789e6b70
+      internalID: -1957794578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MGuide_Bullet_1
+      name: MidAirPlan_1
       rect:
         serializedVersion: 2
-        x: 12
+        x: 310
         y: 0
-        width: 12
-        height: 16
+        width: 310
+        height: 335
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,134 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 724c00cd8c9d6bc44a90b4fc9c347795
-      internalID: 914855390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MGuide_Bullet_2
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e908d5dd87af5f740b5bac30fc63c2d8
-      internalID: -79866863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MGuide_Bullet_3
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2214b99a468e9054ea2e00aaee224db6
-      internalID: -1176057818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MGuide_Bullet_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d3c184f62a52d24cb0676041ebd3132
-      internalID: -1877890134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MGuide_Bullet_5
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 630c092bb9490ec4fbcf4895f99cdd80
-      internalID: 2042653145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MGuide_Bullet_6
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19ccfd3245efebe47bdb86457284b519
-      internalID: 1750526973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MGuide_Bullet_7
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d5e95fc182ec704e8c282d51d33ea55
-      internalID: -265964767
+      spriteID: 80d0c4f759d2bc145b5e1e5bed5a1708
+      internalID: -354456798
       vertices: []
       indices: 
       edges: []
@@ -327,14 +201,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MGuide_Bullet_0: 1197256336
-      MGuide_Bullet_1: 914855390
-      MGuide_Bullet_2: -79866863
-      MGuide_Bullet_3: -1176057818
-      MGuide_Bullet_4: -1877890134
-      MGuide_Bullet_5: 2042653145
-      MGuide_Bullet_6: 1750526973
-      MGuide_Bullet_7: -265964767
+      MidAirPlan_0: -1957794578
+      MidAirPlan_1: -354456798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
