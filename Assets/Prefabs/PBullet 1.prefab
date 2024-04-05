@@ -172,5 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
-  hit: {fileID: 646162839667119314, guid: 711ce9f090bce4d44b44518eed642583, type: 3}
+  hit: {fileID: 7884968852211980681, guid: dc6a9e88c2c1a724ea52523acb61963b, type: 3}
   Attack: 10
