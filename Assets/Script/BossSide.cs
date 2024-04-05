@@ -9,8 +9,14 @@ public class BossSide : MonoBehaviour
     public GameObject explosiveEffect;
 
     public GameObject ms;
-    public Transform pos;
+    public Transform pos1;
+    public Transform pos2;
+    public Transform pos3;
     bool msState = true;
+
+    GameObject missile1;
+    GameObject missile2;
+    GameObject missile3;
 
 
     void Start()
@@ -78,7 +84,22 @@ public class BossSide : MonoBehaviour
         {
             if (msState)
             {
-                Instantiate(ms, pos.position, Quaternion.identity);
+
+                missile1 =  Instantiate(ms, pos1.position, Quaternion.identity);
+
+                missile2.GetComponent<MBullet>().Move(Vector2.up);
+                missile2 = Instantiate(ms, pos3.position, Quaternion.identity);
+
+                if (gameObject.CompareTag("BossLeft"))
+                {
+                    missile3.GetComponent<MBullet>().Move(Vector2.left);
+                    missile3 = Instantiate(ms, pos2.position, Quaternion.identity);
+                }
+                if (gameObject.CompareTag("BossRight"))
+                {
+                    missile3.GetComponent<MBullet>().Move(Vector2.right);
+                    missile3 = Instantiate(ms, pos2.position, Quaternion.identity);
+                }
             }
 
             yield return new WaitForSeconds(0.5f);

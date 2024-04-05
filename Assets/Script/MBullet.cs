@@ -5,7 +5,7 @@ using UnityEngine;
 public class MBullet : MonoBehaviour
 {
     public float speed = 3f;
-
+    Vector2 vec2 = Vector2.down;
     void Start()
     {
         
@@ -20,6 +20,12 @@ public class MBullet : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+
+
+    public void Move(Vector2 vec)
+    {
+        vec2 = vec;
     }
 
     //충돌처리
