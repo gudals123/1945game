@@ -69,6 +69,11 @@ public class BossSide : MonoBehaviour
 
             StartCoroutine("Hit");
         }
+        if (collision.CompareTag("Lazer"))
+        {
+
+            StartCoroutine("Hit");
+        }
     }
 
     IEnumerator Hit()
@@ -87,18 +92,18 @@ public class BossSide : MonoBehaviour
 
                 missile1 =  Instantiate(ms, pos1.position, Quaternion.identity);
 
-                missile2.GetComponent<MBullet>().Move(Vector2.up);
                 missile2 = Instantiate(ms, pos3.position, Quaternion.identity);
+                missile2.GetComponent<MBullet>().Move(new Vector2(0,1));
 
                 if (gameObject.CompareTag("BossLeft"))
                 {
-                    missile3.GetComponent<MBullet>().Move(Vector2.left);
                     missile3 = Instantiate(ms, pos2.position, Quaternion.identity);
+                    missile3.GetComponent<MBullet>().Move(Vector2.left);
                 }
                 if (gameObject.CompareTag("BossRight"))
                 {
-                    missile3.GetComponent<MBullet>().Move(Vector2.right);
                     missile3 = Instantiate(ms, pos2.position, Quaternion.identity);
+                    missile3.GetComponent<MBullet>().Move(Vector2.right);
                 }
             }
 

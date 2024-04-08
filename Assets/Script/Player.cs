@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -17,7 +19,12 @@ public class Player : MonoBehaviour
     public int power = 0;
     public int itemCount = 0;
 
-    // Start is called before the first frame update
+    //레이져
+    public GameObject lazer;
+    public float gValue = 0;
+    public Image gage;
+
+
     void Start()
     {
         ani = GetComponent<Animator>();
@@ -62,6 +69,37 @@ public class Player : MonoBehaviour
             shootCheck = false;
             StartCoroutine(Shoot());
         }
+
+        //스페이스바 누르고 있을때
+        else if (Input.GetKey(KeyCode.Q))
+        {
+            gValue += Time.deltaTime;
+            gage.fillAmount = gValue;
+
+
+            if (gValue >= 1)
+            {
+                //레이져 나가기
+                GameObject go = Instantiate(lazer, pos.position, Quaternion.identity);
+
+                Destroy(go, 3);
+                gValue = 0;
+            }
+        }
+        else
+        {
+            gValue -= Time.deltaTime;
+
+            if (gValue <=0)
+            {
+                gValue = 0;
+            }
+
+            //UI
+            gage.fillAmount = gValue;
+        }
+
+
 
         transform.Translate(moveX, moveY, 0);
 

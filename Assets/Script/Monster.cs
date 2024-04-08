@@ -50,6 +50,11 @@ public class Monster : MonoBehaviour
 
             StartCoroutine("Hit");
         }
+        if (collision.CompareTag("Lazer"))
+        {
+
+            StartCoroutine("Hit");
+        }
     }
 
 

@@ -53,6 +53,11 @@ public class BossHead : MonoBehaviour
 
             StartCoroutine("Hit");
         }
+        if (collision.CompareTag("Lazer"))
+        {
+
+            StartCoroutine("Hit");
+        }
     }
     IEnumerator Hit()
     {

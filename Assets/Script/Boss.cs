@@ -11,13 +11,20 @@ public class Boss : MonoBehaviour
     public GameObject ms2;
     bool BoundaryCheck = false;
 
-    bool headMsState = true;
 
     void Start()
     {
-           //内风凭 角青
+        Invoke("Hide", 1);
+        //内风凭 角青
         StartCoroutine(CicleFire());
+
     }
+
+    void Hide()
+    {
+        GameObject.Find("TextBossWarning").SetActive(false);
+    }
+
 
     public void colliderControll()
     {
@@ -107,6 +114,11 @@ public class Boss : MonoBehaviour
             StartCoroutine("Hit");
             //GameObject.FindGameObjectWithTag("BossHead").GetComponent<BossHead>().BeHit();
 
+        }
+        if (collision.CompareTag("Lazer"))
+        {
+
+            StartCoroutine("Hit");
         }
     }
 

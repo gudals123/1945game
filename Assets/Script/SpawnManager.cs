@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Spawn : MonoBehaviour
 {
@@ -12,11 +14,20 @@ public class Spawn : MonoBehaviour
     private GameObject monster;
     [SerializeField]
     private GameObject monster2;
-
+    [SerializeField]
+    private GameObject boss;
 
     bool swi = true;
     bool swi2 = true;
 
+    [SerializeField]
+    GameObject textBossWarning;
+
+
+    private void Awake()
+    {
+        textBossWarning.SetActive(false);
+    }
 
     void Start()
     {
@@ -75,7 +86,11 @@ public class Spawn : MonoBehaviour
         StopCoroutine("RandomSpawn2");
 
         //보스몬스터
+        textBossWarning.SetActive(true);
 
+        Vector3 pos = new Vector3(0, 2.899f, 0);
+
+        Instantiate(boss, pos, Quaternion.identity);
 
     }
 
