@@ -17,7 +17,7 @@ public class PBullet: MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.up *bulletSpeed * Time.deltaTime);
-    }
+    }   
 
     private void OnBecameInvisible()
     {
